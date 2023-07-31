@@ -5,13 +5,134 @@
     <meta charset="UTF-8">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="first.js"></script>
+    <script src="maps.js"></script>
+
+    <script src="https://d3js.org/topojson.v1.min.js"> </script>
+    <link rel="stylesheet" href="home.css" />
     <title> Narrative Visualization </title>
 
 </head>
 
-<body onload="init()">
+<html>
+<script src='https://d3js.org/d3.v5.min.js'></script>
+<h1 class="title"> CarVitals: Exploring Mileage, Fuel Type, and Engine Count of Vehicles </h1>
+<div class=highlight> </div>
 
+<style>
+    body {
+        background-color: beige
+    }
+</style>
+<style>
+    circle {
+        fill: lightblue;
+        stroke: black;
+    }
+</style>
+
+<body onload='init()'>
+    <svg width=1000 height=1000 id="dataviz_brushing"></svg>
+    <div id="tooltip" class="hidden">
+        <p><strong>Average City MPG</strong></p>
+        <p><span id=value>100</span></p>
+        <p><strong>Average Highway MPG</strong></p>
+        <p><span id=value2>100</span></p>
+
+    </div>
+
+
+    <!-- <button onclick="window.location.href = 'second.html';">HOME</button> -->
+    <button id="redirectButton">Go to Second Page</button>
+
+    <script>
+        document.getElementById('redirectButton').addEventListener('click', function () {
+            window.location.href = 'second.html';
+        });
+    </script>
+
+    <script>
+        document.getElementById('next1').addEventListener('click', function () {
+
+        });
+    </script>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Paragraph Navigation</title>
+        <style>
+            /* Hide all paragraphs by default */
+            .paragraph {
+                display: none;
+            }
+
+            /* Show the active paragraph */
+            .active {
+                display: block;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="paragraph-container">
+            <div class="paragraph p1 active">
+                <p>Welcome to car exploration! We will help you know more about car types and their mileages. </p>
+            </div>
+            <div class="paragraph p2">
+                <p>In this graph of log(City MPG) vs log (Highway MPG) you can see that they have a linear relationship.
+                </p>
+            </div>
+            <div class="paragraph p3">
+                <p>However the linear relationship indicates the original parameters have exponential relationship and
+                    slope indicates the power. </p>
+            </div>
+            <div class="paragraph p4">
+                <p> Feel free to explore the site to gain more meaningful understanding of the cars and mileages.</p>
+            </div>
+        </div>
+
+        <button onclick="showPreviousParagraph()">Previous</button>
+        <button onclick="showNextParagraph()">Next</button>
+
+        <script>
+            let currentParagraph = 1;
+            const totalParagraphs = 3;
+
+            function showParagraph(paragraphNumber) {
+                // Hide all paragraphs
+                const paragraphs = document.getElementsByClassName('paragraph');
+                for (let i = 0; i < paragraphs.length; i++) {
+                    paragraphs[i].classList.remove('active');
+                }
+
+                // Show the desired paragraph
+                const activeParagraph = document.querySelector('.p' + paragraphNumber);
+                activeParagraph.classList.add('active');
+                currentParagraph = paragraphNumber;
+            }
+
+            function showNextParagraph() {
+                if (currentParagraph < totalParagraphs) {
+                    showParagraph(currentParagraph + 1);
+                }
+            }
+
+            function showPreviousParagraph() {
+                if (currentParagraph > 1) {
+                    showParagraph(currentParagraph - 1);
+                }
+            }
+        </script>
+    </body>
+
+    </html>
 
 </body>
 
+<!-- </body onload='abother()'>
+<svg width=1000 height=1000></svg> -->
+
+
+
 </html>
+<!-- <body onload="main()"> -->

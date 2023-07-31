@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="first.js"></script>
+    <!-- <script src="maps.js"></script> -->
+
+    <script src="https://d3js.org/topojson.v1.min.js"> </script>
+    <link rel="stylesheet" href="home.css" />
+    <title> Second scence: Pie Chart of Car Mileage </title>
+
+</head>
+
+<style>
+    path {
+        stroke: black;
+    }
+
+    body {
+        background-color: beige
+    }
+</style>
+
+<body onload='another()'>
+
+    <h1> Pie Chart of Average Highway MPG Based On Fuel Type</h1>
+
+
+    <svg width=1000 height=1000></svg>
+
+
+    <div id="tooltip" class="hidden">
+        <p><strong>Average Highway MPG </strong></p>
+        <p><span id=value4>100</span></p>
+    </div>
+    <button id="redirect">Previous</button>
+
+    <div id=dis>
+        <p> Average MPG Diesel</p>
+    </div>
+
+
+    <div id=ele>
+        <p> Average MPG Electricity</p>
+    </div>
+
+    <div id=gas>
+        <p> Average MPG Gas </p>
+    </div>
+
+    <container>
+
+        <svg id="second" width=1000 height=1000>
+
+        </svg>
+    </container>
+
+
+
+    <script>
+        document.getElementById('redirect').addEventListener('click', function () {
+            window.location.href = 'index.html';
+        });
+    </script>
+
+
+</body>
