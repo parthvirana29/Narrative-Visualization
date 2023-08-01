@@ -221,6 +221,8 @@ async function init(){
         .style("fill", "steelblue")
         .attr("x", function(d) {return x2(d.xValue); })
         .attr("y", function(d) { return y2(d.averageY); })
+        d3.select('#tooltip').classed('hidden', true);
+
 
     }
 
