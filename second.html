@@ -23,47 +23,86 @@
     }
 </style>
 
-<body onload='another()'>
+<body onload='init()'>
 
     <h1> Pie Chart of Average Highway MPG Based On Fuel Type</h1>
 
 
-    <svg width=1000 height=1000></svg>
+    <svg width=500 height=1000>
+    </svg>
 
+    <svg width="500" height="1000" x="500" y="0" id="svg2">
+
+        <!-- <rect x="10" y="0" width="30" height="30" style="fill:rgb(0, 255, 255);" /> -->
+
+    </svg>
 
     <div id="tooltip" class="hidden">
         <p><strong>Average Highway MPG </strong></p>
         <p><span id=value4>100</span></p>
     </div>
-    <button id="redirect">Previous</button>
 
-    <div id=dis>
-        <p> Average MPG Diesel</p>
+    <div id=dis x=300 y=400>
+        <details>
+            <summary> Average MPG Diesel </summary>
+            <p id=dis2> average_mpg_electric</p>
+        </details>
     </div>
 
-
     <div id=ele>
-        <p> Average MPG Electricity</p>
+        <details>
+            <summary> Average range Electricity </summary>
+            <p id=ele2> average_mpg_electric</p>
+        </details>
     </div>
 
     <div id=gas>
-        <p> Average MPG Gas </p>
+        <details>
+            <summary> Average MPG Gas </summary>
+            <p id=gas2> average_mpg_gas</p>
+        </details>
     </div>
 
+
     <container>
+        <p id=intro2>
 
-        <svg id="second" width=1000 height=1000>
+            <br>
+            Welcome to the second page! The pie chart on left demonstrate the MPG for each fuel type. Although electric
+            cars' unit is not MPG. The equivalent of MPG is portrayed.
+            <br>
+            <br>
+            Hover on bar chart & pie chart to gain more insight!
+            <br>
+            <br>
+            Feel free to explore the site to gain more meaningful understanding of the cars and mileages!
+            <br>
+            <br>
+            <button id="redirect">Previous</button>
+            <script>
+                document.getElementById('redirect').addEventListener('click', function () {
+                    window.location.href = 'index.html';
+                });
+            </script>
 
-        </svg>
+
+        </p>
+
     </container>
 
-
-
-    <script>
+    <!-- <script>
         document.getElementById('redirect').addEventListener('click', function () {
             window.location.href = 'index.html';
         });
-    </script>
+    </script> -->
+    <div id="tooltip" class="hidden">
+        <p><strong>Average Highway MPG</strong></p>
+        <p><span id=value>100</span></p>
 
+        <!-- 
+        <p><strong>Average Highway MPG</strong></p>
+        <p><span id=another>100</span></p> -->
+
+    </div>
 
 </body>

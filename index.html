@@ -35,20 +35,18 @@
     <div id="tooltip" class="hidden">
         <p><strong>Average City MPG</strong></p>
         <p><span id=value>100</span></p>
+
+
         <p><strong>Average Highway MPG</strong></p>
-        <p><span id=value2>100</span></p>
+        <p><span id=another>100</span></p>
 
     </div>
 
 
     <!-- <button onclick="window.location.href = 'second.html';">HOME</button> -->
-    <button id="redirectButton">Go to Second Page</button>
+    <!-- <button id="redirectButton">Go to Second Page</button> -->
 
-    <script>
-        document.getElementById('redirectButton').addEventListener('click', function () {
-            window.location.href = 'second.html';
-        });
-    </script>
+
 
     <script>
         document.getElementById('next1').addEventListener('click', function () {
@@ -72,6 +70,37 @@
             }
         </style>
     </head>
+
+    <container>
+        <p id=intro>
+            <br>
+            <br>
+            Welcome to car exploration! We will help you know more about car types and their mileages.
+            In this graph of log(City MPG) vs log (Highway MPG) you can see that they have a linear relationship.
+            However the linear relationship indicates the original parameters have exponential relationship and
+            slope indicates the power.
+            <br>
+            <br>
+            Hover on circles to gain more insight!
+            <br>
+            <br>
+            Feel free to explore the site to gain more meaningful understanding of the cars and mileages!
+            <br>
+            <br>
+            <button id="redirectButton">Go to Second Page</button>
+            <script>
+                document.getElementById('redirectButton').addEventListener('click', function () {
+                    window.location.href = 'second.html';
+                });
+            </script>
+
+        </p>
+
+    </container>
+
+    <style>
+
+    </style>
 
     <body>
         <div class="paragraph-container">

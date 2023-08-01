@@ -70,10 +70,17 @@ async function init(){
             .style('left', xPos + 'px')
             .style('top', yPos+ 'px')
             .select('#value').text(d.AverageCityMPG)
-            .select('#valye2').text(d.AverageHighwayMPG)
-            // console.log(d.AverageCityMPG)
-            // console.log(d.AverageHighwayMPG)
-         
+
+
+        d3.select("#tooltip")
+        .style('left', xPos + 'px')
+        .style('top', yPos+ 'px')
+        .select('#another').text(d.AverageHighwayMPG)
+
+
+            //console.log(d.AverageCityMPG)
+            console.log(d.AverageHighwayMPG)
+            
         d3.select('#tooltip').classed('hidden', false)
     }
     d3.selection.prototype.moveToFront = function() {
